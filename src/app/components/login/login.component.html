@@ -1,0 +1,15 @@
+<form>
+  <div>
+    <label>Логин</label>
+    <input type="text"  [(ngModel)]="loginForm.login" required name="LoginName"/>
+  </div>
+  <div>
+    <label>Пароль</label>
+    <input
+      type="password"
+      required
+    />
+  </div>
+
+  <button (click)="login()">Войти</button>
+</form>
