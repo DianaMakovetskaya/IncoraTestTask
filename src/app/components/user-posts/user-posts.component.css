@@ -1,0 +1,9 @@
+.createPost{
+  display: none;
+}
+.userPostInfo{
+  position: fixed;
+  right: 0;
+  top: 25%;
+  width: 30%;
+}

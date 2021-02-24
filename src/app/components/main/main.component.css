@@ -5,17 +5,16 @@
   justify-content: space-between;
   align-items: center;
 }
-.userName{
+.userName,.allPosts,.userPosts,.LogOut{
   font-size: 15px;
   font-weight: bold;
   color: aliceblue;
 
 }
-.LogOut{
-  background-color: black;
-  height: fit-content;
-  border-radius: 5px;
-  color: aliceblue;
-  font-weight: bold;
 
+.userPosts,.allPosts,.LogOut{
+  border-radius: 8px;
+  background: linear-gradient(90deg, rgba(168,234,255,1) 0%, rgba(0,125,255,1) 68%);
+  border: 1px rgba(0,125,255,1) solid ;
 }
+

@@ -11,6 +11,8 @@ import { AuthComponent } from './components/auth/auth.component';
 import { AllPostsComponent } from './components/all-posts/all-posts.component';
 import { UserPostsComponent } from './components/user-posts/user-posts.component';
 import { PostComponent } from './components/post/post.component';
+import { UserPostComponent } from './components/user-post/user-post.component';
+import { PostInfoComponent } from './components/post-info/post-info.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { PostComponent } from './components/post/post.component';
     AuthComponent,
     AllPostsComponent,
     UserPostsComponent,
-    PostComponent
+    PostComponent,
+    UserPostComponent,
+    PostInfoComponent
   ],
     imports: [
         BrowserModule,
@@ -37,12 +41,16 @@ import { PostComponent } from './components/post/post.component';
         },
         {
           path: 'main', component: MainComponent, children: [{
-            path: 'AllPosts', component: AllPostsComponent
-          },
-            {
-              path: 'UserPosts', component: UserPostsComponent
-
+            path: 'AllPosts', component: AllPostsComponent, children: [{
+              path: ':id', component: PostInfoComponent
             }]
+          }, {
+            path: 'UserPosts', component: UserPostsComponent, children : [{
+              path: ':id', component: PostInfoComponent
+            }]
+
+          }
+           ]
         }]),
     ],
   providers: [],

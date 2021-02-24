@@ -1,10 +1,8 @@
 <div class="header">
 <div class="userName">Hello {{user.name}}!</div>
-  <button class="LogOut"> Log Out</button>
+  <button class="allPosts" (click)="goToAllPosts()">all posts</button>
+  <button class="userPosts" (click)="goToUserPosts()">my posts</button>
+  <button class="LogOut" (click)="logOut()"> Log Out</button>
 </div>
-<ul>
-  <li><a [routerLink]="['AllPosts']">all posts</a></li>
-  <li><a [routerLink]="['UserPosts']">my posts</a></li>
-</ul>
 
 <router-outlet></router-outlet>
